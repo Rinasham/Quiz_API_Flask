@@ -145,7 +145,7 @@ main {
 #main-wrapper {
   z-index: 10000;
   width: 90%;
-  margin: 0 auto;
+  margin: 60px auto;
   text-align: center;
 }
 
@@ -167,4 +167,19 @@ footer {
   width: 100%;
   text-align: center;
   line-height: 0.5em;
+}
+
+
+/* ------------  quiz page -------------------------------------------- */
+
+.page-title {
+  padding-bottom: 0.3em;
+  display: inline;
+  border-bottom: 0;
+  border-image: linear-gradient(to left, #666 0%, #fff 100%) 1/0 0 1px 0;
+  border-style: solid;
+}
+
+.category {
+  margin-top: 2em;
 }
