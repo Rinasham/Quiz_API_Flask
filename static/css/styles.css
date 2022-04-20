@@ -107,9 +107,17 @@ body {
   /* border-top: 3px solid white; */
 }
 
+#line2 > ul > li > a:hover {
+  color:  #8C323A;
+}
+
 a:-webkit-any-link {
   color: white;
   text-decoration: none !important;
+}
+
+a:hover {
+  color:  #4C7373;
 }
 
 
@@ -201,4 +209,21 @@ footer {
   color: #232226;
   display: flex;
   justify-content: space-around;
+}
+
+
+
+/* ------ code options ---------- */
+
+#code-choices {
+  display: flex;
+  justify-content: center;
+  font-size: 0.7em;
+}
+
+#code-choices > p {
+  margin: 0 7px;
+  padding: 0 12px 4px;
+  padding-bottom: 4px;
+  border-bottom: solid 2px #8C323A;
 }

@@ -2,12 +2,13 @@ import psycopg2
 from flask import Flask, request, redirect, render_template
 import requests
 import settings
+import random
+import json
 
 
 app = Flask(__name__)
 
 key = settings.AP
-print(key)
 
 
 
@@ -33,16 +34,23 @@ def showAbout():
 
 @app.route('/quiz')
 def quiz_top():
-    url = 'http://localhost:3000/quiz/sql'
+
+
+    return render_template('quiz-start.html')
+
+@app.route('/quiz/<categoryName>/<lang>')
+def quiz_main(categoryName, lang):
+    print(categoryName, lang)
+
+    url = f'http://localhost:3000/quiz/{categoryName}/{lang}'
     res = requests.get(url).json()
-    print(res)
+    # for obj in res:
+    #     print(obj['tags'][0]['name'])
 
-    return render_template('quiz-start.html')
-
-@app.route('/quiz/<categoryName>')
-def quiz_main(categoryName):
-    print(categoryName)
-    return render_template('quiz-start.html')
+    quiz_list = random.sample(res, 3)
+    print(json.dumps(quiz_list, indent=2))
+    
+    return render_template('quiz-main.html', list = quiz_list)
 
 
 

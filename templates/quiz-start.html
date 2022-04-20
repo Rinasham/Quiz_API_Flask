@@ -3,13 +3,20 @@
 {% block main %}
 <h1 class="page-title">Quiz page</h1>
 <div class="category">
-  <p><a href="{{ url_for('quiz_main', categoryName='linux')}}">Linux</a></p>
-  <p>Python</p>
-  <p>Bash</p>
-  <p>Docker</p>
-  <p>SQL</p>
-  <p>CMS</p>
-  <p>Code</p>
-  <p>DevOps</p>
+  <p><a href="{{ url_for('quiz_main', categoryName='linux', lang='NotSet')}}">Linux</a></p>
+  <!-- <p><a href="{{ url_for('quiz_main', categoryName='python', lang='NotSet')}}">Python</a></p> -->
+  <p><a href="{{ url_for('quiz_main', categoryName='bash', lang='NotSet')}}">Bash</a></p>
+  <p><a href="{{ url_for('quiz_main', categoryName='Docker', lang='NotSet')}}">Docker</a></p>
+  <p><a href="{{ url_for('quiz_main', categoryName='SQL', lang='NotSet')}}">SQL</a></p>
+  <p><a href="{{ url_for('quiz_main', categoryName='CMS', lang='NotSet')}}">CSM</a></p>
+  <p><a href="{{ url_for('quiz_main', categoryName='Code', lang='NotSet')}}">Code (All languages)</a></p>
+
+  <div id="code-choices">
+    <p><a href="{{ url_for('quiz_main', categoryName='Code', lang='HTML')}}">HTML</a></p>
+    <p><a href="{{ url_for('quiz_main', categoryName='Code', lang='PHP')}}">PHP</a></p>
+    <p><a href="{{ url_for('quiz_main', categoryName='Code', lang='JavaScript')}}">JavaScript</a></p>
+    <p><a href="{{ url_for('quiz_main', categoryName='Code', lang='Laravel')}}">Laravel</a></p>
+  </div>
+  <p><a href="{{ url_for('quiz_main', categoryName='DevOps', lang='NotSet')}}">DevOps</a></p>
 </div>
 {% endblock %}
