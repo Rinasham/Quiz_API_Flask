@@ -42,7 +42,7 @@ def quiz_top():
 @app.route('/quiz/<categoryName>')
 def quiz_main(categoryName):
     print(categoryName)
-    return render_template('quiz-main.html')
+    return render_template('quiz-start.html')
 
 
 
