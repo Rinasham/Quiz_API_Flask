@@ -20,10 +20,10 @@
       <div id="line2">
         <img src="static/imgs/compass.png">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Quiz</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('quiz_top') }}">Quiz</a></li>
+          <li><a href="{{ url_for('showContact') }}">Contact</a></li>
+          <li><a href="{{ url_for('showAbout') }}">About</a></li>
         </ul>
       </div>
       <p class="wavy"></p>

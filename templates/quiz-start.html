@@ -3,7 +3,7 @@
 {% block main %}
 <h1 class="page-title">Quiz page</h1>
 <div class="category">
-  <p>Linux</p>
+  <p><a href="{{ url_for('quiz_main', categoryName='linux')}}">Linux</a></p>
   <p>Python</p>
   <p>Bash</p>
   <p>Docker</p>

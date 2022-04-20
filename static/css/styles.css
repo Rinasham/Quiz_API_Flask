@@ -9,8 +9,8 @@ body {
   position: relative;
   padding-bottom: 60px;
   box-sizing: border-box;
-  min-height: 100vh;
-  /* height: 100%; */
+  /* min-height: 100vh; */
+  height: 100vh;
   color: white;
 }
 
@@ -107,6 +107,13 @@ body {
   /* border-top: 3px solid white; */
 }
 
+a:-webkit-any-link {
+  color: white;
+  text-decoration: none !important;
+}
+
+
+
 #line3 {
   height: 60px;
   background-image:url('../imgs/vintage.jpg');
@@ -182,4 +189,16 @@ footer {
 
 .category {
   margin-top: 2em;
+}
+
+#quiz-wrapper {
+  background-color:rgba(255,255,255,0.8);
+  width: 70%;
+  height: 40vh;
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+  color: #232226;
+  display: flex;
+  justify-content: space-around;
 }

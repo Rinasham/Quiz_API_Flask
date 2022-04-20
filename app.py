@@ -8,9 +8,28 @@ app = Flask(__name__)
 
 key = settings.AP
 print(key)
+
+
+
+#----------------------------------------------------------------
+
+
 @app.route('/')
 def index():
     return render_template('home.html')
+
+
+@app.route('/contact')
+def showContact():
+    return render_template('contact.html')
+
+
+@app.route('/about')
+def showAbout():
+    return render_template('about.html')
+
+
+#----------------------------- QUIZ -----------------------------------
 
 @app.route('/quiz')
 def quiz_top():
@@ -18,11 +37,12 @@ def quiz_top():
     res = requests.get(url).json()
     print(res)
 
-    return render_template('quiz.html')
+    return render_template('quiz-start.html')
 
-
-
-
+@app.route('/quiz/<categoryName>')
+def quiz_main(categoryName):
+    print(categoryName)
+    return render_template('quiz-main.html')
 
 
 
