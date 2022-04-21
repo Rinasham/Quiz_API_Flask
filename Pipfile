@@ -8,6 +8,7 @@ flask = "*"
 psycopg2 = "*"
 python-dotenv = "*"
 requests = "*"
+jinja2 = "*"
 
 [dev-packages]
 
